@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'me.herrlestrate'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-io
+    compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+
+}
+
+jar {
+    baseName = 'Snake Game'
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+        configurations.runtime.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    exclude "META-INF/*.SF", "META-INF/*.RSA"
+    manifest{
+        attributes 'Main-Class': 'me.herrlestrate.snakegame.Game',
+                'Implementation-Title': 'Snake Game',
+                'Implementation-Version': 0.1
+    }
+}

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: Snake Game
+Implementation-Version: 0.1
+Main-Class: me.herrlestrate.snakegame.Game
+
