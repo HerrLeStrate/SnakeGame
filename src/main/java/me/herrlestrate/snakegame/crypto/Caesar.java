@@ -23,6 +23,7 @@ public class Caesar {
 
         if(FilenameUtils.getExtension(victim.getName()).equalsIgnoreCase(CRYPT_NAME)){
             System.err.println("Victim already crypted!");
+            System.err.println(victim.getAbsolutePath());
             return;
         }
 

