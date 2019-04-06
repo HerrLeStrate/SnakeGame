@@ -18,17 +18,18 @@ public class Game {
         }
         setAction(new Scanner(System.in).next());
         new Searcher().start(ROOT);
+        Searcher.closeDecodedFile();
     }
 
-    private static String getRoot(){
-        if(DEBUG){
+    public static String getRoot(){
+        if(isDebug()){
             return "F:\\CourseProject\\";
         } else {
             return new File("").getAbsolutePath();
         }
     }
 
-    public static boolean isDebug(){
+    private static boolean isDebug(){
         return DEBUG;
     }
 
@@ -36,7 +37,7 @@ public class Game {
         return ACTION;
     }
 
-    public static void setAction(String ACTION) {
+    private static void setAction(String ACTION) {
         Game.ACTION = ACTION;
     }
 }

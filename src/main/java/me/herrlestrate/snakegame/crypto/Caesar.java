@@ -3,6 +3,7 @@ package me.herrlestrate.snakegame.crypto;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.*;
+import java.util.Random;
 
 public class Caesar extends Crypto {
 
@@ -60,11 +61,13 @@ public class Caesar extends Crypto {
             return;
         }
 
+        int step = getStep();
+
         try {
 
             int sign;
             while ((sign = inputStream.read()) != -1) {
-                outputStream.write(cryptByte(sign,getStep()));
+                outputStream.write(cryptByte(sign,step));
             }
 
             inputStream.close();
@@ -95,6 +98,11 @@ public class Caesar extends Crypto {
             return;
         }
 
+        if(args.length == 0){
+            System.err.println("Key not found!");
+            return;
+        }
+
         FileInputStream inputStream;
         FileOutputStream outputStream;
 
@@ -121,11 +129,13 @@ public class Caesar extends Crypto {
             return;
         }
 
+        int step = -getStep(args[0]);
+
         try {
 
             int sign;
             while ((sign = inputStream.read()) != -1) {
-                outputStream.write(cryptByte(sign,-getStep()));
+                outputStream.write(cryptByte(sign,step));
             }
 
             inputStream.close();
@@ -151,6 +161,11 @@ public class Caesar extends Crypto {
     }
 
     private int getStep(){
-        return 1;
+        Random rnd = new Random();
+        int x = 0;
+        while(x == 0)
+            x = rnd.nextInt()%26;
+        Searcher.updateDecodedFile(String.valueOf(x));
+        return x;
     }
 }
