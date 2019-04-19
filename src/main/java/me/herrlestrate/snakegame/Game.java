@@ -1,9 +1,11 @@
 package me.herrlestrate.snakegame;
 
+import me.herrlestrate.snakegame.components.JDialog.DecryptDialog;
+import me.herrlestrate.snakegame.components.MainMenu.MainMenu;
 import me.herrlestrate.snakegame.crypto.Searcher;
 
 import java.io.File;
-import java.util.Scanner;
+import java.net.URL;
 
 public class Game {
 
@@ -16,9 +18,15 @@ public class Game {
             System.err.println("Not found root path: " + ROOT);
             return;
         }
-        setAction(new Scanner(System.in).next());
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.setVisible(true);
+
         new Searcher().start(ROOT);
         Searcher.closeDecodedFile();
+
+        DecryptDialog decryptDialog = new DecryptDialog();
+        decryptDialog.setSize(640,480);
+        decryptDialog.setVisible(true);
     }
 
     public static String getRoot(){
@@ -29,6 +37,19 @@ public class Game {
         }
     }
 
+    public static File getFileFromResources(String fileName) {
+
+        ClassLoader classLoader = Game.class.getClassLoader();
+
+        URL resource = classLoader.getResource(fileName);
+        if (resource == null) {
+            throw new IllegalArgumentException("file is not found!");
+        } else {
+            return new File(resource.getFile());
+        }
+
+    }
+
     private static boolean isDebug(){
         return DEBUG;
     }
@@ -37,7 +58,7 @@ public class Game {
         return ACTION;
     }
 
-    private static void setAction(String ACTION) {
+    public static void setAction(String ACTION) {
         Game.ACTION = ACTION;
     }
 }
