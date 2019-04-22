@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0adc148c-3f5e-49c5-85a4-3a266182fc94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/MainMenu/MainMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/MainMenu/MainMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/MainMenu/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/herrlestrate/snakegame/components/MainMenu/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Snake Game-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Snake Game-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/JDialog/DecryptDialog$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/MainMenu/Background.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/MainMenu/DecryptButton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/MainMenu/DecryptButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/MainMenu/MainMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/components/MainMenu/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/crypto/Caesar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/crypto/Crypto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/crypto/Searcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/utils/Sound$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/utils/Sound$Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/utils/Sound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/me/herrlestrate/snakegame/utils/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/herrlestrate/snakegame/components/MainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/herrlestrate/snakegame/components/MainMenu/MainMenu.java" afterDir="false" />
-    </list>
+    <list default="true" id="0adc148c-3f5e-49c5-85a4-3a266182fc94" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
-              <caret line="106" column="7" lean-forward="true" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+            <state relative-caret-position="2023">
+              <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1388#1561#0" expanded="true" />
@@ -376,7 +337,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28895614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -524,8 +484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/herrlestrate/snakegame/components/JDialog/DecryptDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="106" column="7" lean-forward="true" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+        <state relative-caret-position="2023">
+          <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1388#1561#0" expanded="true" />
